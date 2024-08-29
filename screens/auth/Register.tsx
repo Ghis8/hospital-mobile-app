@@ -10,6 +10,7 @@ const Register = (props:any) => {
   const [gender,setGender]=useState<string>("Male")
   const [loading,setLoading]=useState<boolean>(false)
   const genderOptions=['Male','Female']
+  
   return (
     <KeyboardAwareScrollView
         className={theme == "light"?

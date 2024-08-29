@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, Image } from 'react-native'
+import React, { useState } from 'react'
 import { useAppSelector } from '../redux/hooks'
 import { selectTheme, selectUser } from '../redux/slices/userSlice'
+import Icon from 'react-native-vector-icons/Feather'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import { Nav } from '../components'
 
-const Home = () => {
+const Home = (props:any) => {
   const user=useAppSelector(selectUser)
+  const [notification,setNotification]=useState<number>(1)
   const theme=useAppSelector(selectTheme)
   console.log("user->",user)
   return (
@@ -14,11 +18,11 @@ const Home = () => {
         "flex-1 bg-white p-2":
         "flex-1 bg-black p-2"
     }>
-      <View className=''>
-        <View className=''>
-          <Text className={theme== 'light'?"text-balck text-xs":"text-gray-500 text-xs"}>Location</Text>
-        </View>
-      </View>
+      <Nav 
+        FirstName={user.firstName}
+        Address={user.address}
+        Profile={()=>console.log("Profile pic pressed")}
+      />
     </View>
   )
 }
