@@ -4,7 +4,7 @@ import { services } from '../constants/Data'
 
 const Service = () => {
   return (
-    <View className='relative bg-[#27ab4a] w-[90%] h-40 mx-auto rounded-xl'>
+    <View className='relative bg-[#27ab4a] w-[98%] h-40 mx-auto rounded-xl'>
       
       <View className='flex-col mt-2 w-3/4'>
         <Text className='text-white font-bold text-xl text-center'>{services[0].title}</Text>

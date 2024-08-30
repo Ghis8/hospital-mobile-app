@@ -5,15 +5,17 @@ import {
     ForgotPassword, 
     Login, 
     Register 
-} from '../screens/auth'
+} from '../screens'
 import { useColorScheme } from 'react-native'
 import { useAppDispatch, useAppSelector } from '../redux/hooks'
 import { selectUser, setTheme } from '../redux/slices/userSlice'
 import Home from '../screens/Home'
+import BottomTabs from './BottomTabs'
 
+const Stack=createNativeStackNavigator()
 function StackNavigation() {
     const user=useAppSelector(selectUser)
-    const Stack=createNativeStackNavigator()
+    
     const theme=useColorScheme() ?? "light"
     const dispatch=useAppDispatch()
     useEffect(()=>{
@@ -29,7 +31,7 @@ function StackNavigation() {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Register" component={Register} />
             <Stack.Screen name='forgotPassword' component={ForgotPassword} />
-            <Stack.Screen name='Home' component={Home} />
+            <Stack.Screen name='Home' component={BottomTabs} />
         </Stack.Navigator>
     </NavigationContainer>
   )

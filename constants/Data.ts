@@ -54,7 +54,7 @@ export const offers=[
         color:"#c97a3c"
     },
     {
-        iconName:'virus-covid',
+        iconName:'viruses',
         title:'covid',
         color:"#74753b"
     },

@@ -16,7 +16,7 @@ const Nav = ({FirstName,Address,Notification,Profile}:NavProps) => {
     const theme=useAppSelector(selectTheme)
     const [notification,setNotification]=useState<number>(1)
   return (
-    <View className='flex-row justify-between px-2 items-center py-3'>
+    <View className='flex-row justify-between  items-center py-3'>
         <TouchableOpacity 
             onPress={Profile}
         >
