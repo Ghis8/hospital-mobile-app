@@ -16,7 +16,7 @@ const Nav = ({FirstName,Address,Notification,Profile}:NavProps) => {
     const theme=useAppSelector(selectTheme)
     const [notification,setNotification]=useState<number>(1)
   return (
-    <View className='flex-row justify-between px-2 items-center py-3'>
+    <View className='flex-row justify-between  items-center py-3'>
         <TouchableOpacity 
             onPress={Profile}
         >
@@ -37,11 +37,11 @@ const Nav = ({FirstName,Address,Notification,Profile}:NavProps) => {
             <Text className={theme=='dark'?"text-xs text-white":'text-xs text-black'}>{Address}</Text>
           </View>
         </View>
-        <View className='w-10 h-10 relative bg-[#27ab4a] rounded-full justify-center items-center'>
+        <View className='w-10 h-10 relative rounded-full justify-center items-center'>
           {notification > 0 && <View className='absolute w-2 h-2 right-3 top-2 z-10 rounded-full bg-red-700'></View>}
           <FontAwesome 
             name="bell"
-            color='white'
+            color='#27ab4a'
             size={24}
           />
         </View>

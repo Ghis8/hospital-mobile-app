@@ -34,3 +34,74 @@ export const Users=[
     },
 
 ] satisfies IUser[]
+
+export const services=[
+    {
+        title:'Covid-19 Service',
+        content:"Get checked immediately if you have signs of covid desease"
+    }
+]
+
+export const offers=[
+    {
+        iconName:'virus',
+        title:'check-up',
+        color:'#a68d3d'
+    },
+    {
+        iconName:'pills',
+        title:'drugs',
+        color:"#c97a3c"
+    },
+    {
+        iconName:'viruses',
+        title:'covid',
+        color:"#74753b"
+    },
+    {
+        iconName:'chart-pie',
+        title:'others',
+        color:"#749163"
+    },
+    {
+        iconName:'tooth',
+        title:'tooth',
+        color:"#3e8745"
+    },
+    {
+        iconName:'ghost',
+        title:'tht',
+        color:"#915178"
+    },
+    {
+        iconName:'user-md',
+        title:'orthopedi',
+        color:"#663275"
+    },
+    {
+        iconName:'brain',
+        title:'brain',
+        color:"#a779db"
+    },
+    {
+        iconName:'heart',
+        title:'heart',
+        color:"#3c806b"
+    },
+    {
+        iconName:'eye',
+        title:'eye',
+        color:"#4f7b7d"
+    },
+    {
+        iconName:'tired',
+        title:'nerve',
+        color:"#2d4263"
+        
+    },
+    {
+        iconName:'venus-mars',
+        title:'sex',
+        color:"#77a6f2"
+    },
+]
