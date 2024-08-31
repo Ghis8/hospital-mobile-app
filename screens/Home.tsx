@@ -1,12 +1,13 @@
-import { View, Text, Image, TextInput, FlatList, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TextInput, FlatList, TouchableOpacity, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { useAppSelector } from '../redux/hooks'
 import { selectTheme, selectUser } from '../redux/slices/userSlice'
 import Icon from 'react-native-vector-icons/Feather'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import { Nav, Offers, Service } from '../components'
-import { offers } from '../constants/Data'
+import { HistoryCard, Nav, Offers, Service } from '../components'
+import { histories, offers } from '../constants/Data'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import { STATUS } from '../types/IUsers'
 
 const Home = (props:any) => {
   const user=useAppSelector(selectUser)
@@ -18,8 +19,8 @@ const Home = (props:any) => {
     <View 
       className={
         theme=='light'?
-        "flex-1 bg-gray-200 p-2":
-        "flex-1 bg-black p-2"
+        "bg-gray-200 p-2":
+        "bg-black p-2"
     }>
       <Nav 
         FirstName={user.firstName}
@@ -109,8 +110,22 @@ const Home = (props:any) => {
             </TouchableOpacity>
             
           </View>
-          <View className=''>
-
+          <View 
+            className='mt-2'
+          >
+             <FlatList 
+                data={histories}
+                keyExtractor={(data)=>data.date}
+                renderItem={({item})=>(
+                  <HistoryCard 
+                    imageName={item.imageName}
+                    names={item.names}
+                    profession={item.profession}
+                    date={item.date}
+                    status={item.status}
+                  />
+                )}
+             />
           </View>
       </View>
     </View>

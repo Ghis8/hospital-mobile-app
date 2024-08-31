@@ -1,5 +1,5 @@
 import { IUser } from "../types";
-import { Role } from "../types/IUsers";
+import { IhistoryCard, Role, STATUS } from "../types/IUsers";
 
 export const Users=[
     {
@@ -103,5 +103,30 @@ export const offers=[
         iconName:'venus-mars',
         title:'sex',
         color:"#77a6f2"
+    },
+]
+
+export const histories:IhistoryCard[]=[
+    {
+        
+        imageName:require('../assets/profile.jpeg'),
+        names:"Ghislain Kongolo",
+        profession:"Senior Developer",
+        date:'10-sept-2024',
+        status:STATUS.PENDING
+    },
+    {
+        imageName:require('../assets/profile.jpeg'),
+        names:"John doe",
+        profession:"Junior Developer",
+        date:'12-sept-2024',
+        status:STATUS.CANCELED
+    },
+    {
+        imageName:require('../assets/profile.jpeg'),
+        names:"Astrid Kongolo",
+        profession:"Bank Manager",
+        date:'25-august-2024',
+        status:STATUS.FINISHED
     },
 ]

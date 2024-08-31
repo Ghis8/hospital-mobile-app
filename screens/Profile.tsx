@@ -4,8 +4,8 @@ import Loader from '../components/Loader'
 
 const Profile = () => {
   return (
-    <View>
-      <Loader isLoading/>
+    <View className=''>
+      
     </View>
   )
 }
