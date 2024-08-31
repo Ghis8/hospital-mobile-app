@@ -32,7 +32,8 @@ const BottomTabs = () => {
                 ),
                 tabBarIcon:(tabIcon)=>(
                   <Icon name='android-messages' size={24} color={tabIcon.focused?"#27ab4a":"gray"} />
-                )
+                ),
+                tabBarBadge:3
               }}
         />
         <Tab.Screen 
@@ -44,7 +45,9 @@ const BottomTabs = () => {
                 ),
                 tabBarIcon:(tabIcon)=>(
                   <Icon name='text-box' size={24} color={tabIcon.focused?"#27ab4a":"gray"} />
-                )
+                ),
+                tabBarBadge:1
+
               }}
         />
         <Tab.Screen 
